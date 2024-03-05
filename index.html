@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loves</title>
+</head>
+  <style>
+    * {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+}
+.cards {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0F5959;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #107361;
+  height: 400px;
+  width: 500px;
+  border-radius: 10px;
+}
+.username-label {
+  margin-bottom: 10px;
+}
+#username-input {
+  text-align: center;
+  margin-top: 25px;
+  color: black;
+  padding: 5px 0 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#username-input::placeholder {
+  color: black;
+  font-size: 1.2em;
+
+}
+
+#myH1 {
+  font-size: 1.4em;
+  margin-bottom: 40px;
+}
+#submit-btn, #clear-btn {
+  color: white;
+  background-color:  #0F5959;
+  border: none;
+  width: 150px;
+  margin-bottom: 20px;
+  padding: 15px 0 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-top: 45px;
+}
+
+  </style>
+<body>
+  <div class="cards">
+    <div class="container">
+      <h1 id="myH1">Hello</h1>
+
+        <label class="username-label" for="username-input">Whats your First name?:</label>
+      <input placeholder="Your first name." id="username-input" type="text">
+
+      <div class="btns">
+        <button id="submit-btn">Submit</button>
+        <button id="clear-btn">Clear</button>
+      </div>
+    </div>  
+  </div>
+  <script>
+    let username;
+      document.getElementById('submit-btn').onclick = function(){
+        username = document.getElementById('username-input').value;
+        document.getElementById('myH1').textContent =  ` Hello, ${username} Alviar Santos❤️`;
+      }
+
+      document.getElementById('clear-btn').onclick = function(){
+        username = document.getElementById('username-input').value = '';
+        document.getElementById('myH1').textContent =  'Hello';
+      }
+  </script>
+</body>
+</html>
